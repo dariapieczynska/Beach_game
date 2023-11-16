@@ -14,19 +14,23 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
-            transform.position += Vector3.forward * speed * Time.deltaTime;
+            transform.position += transform.forward * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             canTurn = true;
             TurnRight();
-            transform.position += Vector3.forward * speed * Time.deltaTime;
+           
         }
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             canTurn = true;
             TurnLeft();
-            transform.position += Vector3.forward * speed * Time.deltaTime;
+           
+        }
+        if(Input.GetKey(KeyCode.DownArrow)||Input.GetKey(KeyCode.S))
+        {
+            transform.position -= transform.forward * speed * Time.deltaTime;
         }
 
 

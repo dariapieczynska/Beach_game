@@ -7,8 +7,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10f;
-    public bool canTurn = true; 
-
+    public bool canTurn = true;
+    public bool isFast = false;
+    public bool wasFast = false; 
     // Update is called once per frame
     void Update()
     {
@@ -35,6 +36,9 @@ public class PlayerController : MonoBehaviour
 
 
     }
+    /// <summary>
+    /// This function lets the car turn 90 degrees to its right
+    /// </summary>
     public void TurnRight()
     {
         if (canTurn)
@@ -49,6 +53,9 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// this function lets the car turn 90 degrees to its left
+    /// </summary>
     public void TurnLeft()
     {
         if (canTurn)
@@ -63,5 +70,33 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag=="Speed")
+        {
+            if (!wasFast)
+            {
+                
+                other.gameObject.SetActive(false);
+                StartCoroutine(SpeedBoost());
+                StartCoroutine(CoolDown());
+            }
+
+        }
+    }
+    public IEnumerator SpeedBoost()
+    {
+        isFast = true;
+        speed = 20f;
+        yield return new WaitForSeconds(5f);
+        speed = 10f;
+        isFast = false;
+    }
+    public IEnumerator CoolDown()
+    {
+        wasFast = true;
+        yield return new WaitForSeconds(15f);
+        wasFast = false;
+    }
+
 }

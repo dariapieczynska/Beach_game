@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 //Pieczynska, Daria
 // 11/16/2023
 //Player moves forwared, backward and to the sides
@@ -9,7 +10,10 @@ public class PlayerController : MonoBehaviour
     public float speed = 10f;
     public bool canTurn = true;
     public bool isFast = false;
-    public bool wasFast = false; 
+    public bool wasFast = false;
+    public bool slowedDown = false;
+    public bool flatTire = false;
+    public bool hasTire = false; 
     // Update is called once per frame
     void Update()
     {
@@ -74,14 +78,33 @@ public class PlayerController : MonoBehaviour
     {
         if(other.tag=="Speed")
         {
-            if (!wasFast)
+            if (!slowedDown)
             {
-                
-                other.gameObject.SetActive(false);
-                StartCoroutine(SpeedBoost());
-                StartCoroutine(CoolDown());
+                if (!wasFast)
+                {
+
+                    other.gameObject.SetActive(false);
+                    StartCoroutine(SpeedBoost());
+                    StartCoroutine(CoolDown());
+                }
             }
 
+        }
+        if(other.tag=="Mud")
+        {
+            if (!isFast)
+            {
+                other.gameObject.SetActive(false);
+                StartCoroutine(SlowDown());
+            }
+        }
+        if(other.tag=="Spikes")
+        {
+            if(!hasTire)
+            {
+                other.gameObject.SetActive(false);
+                StartCoroutine(Spikes());
+            }
         }
     }
     public IEnumerator SpeedBoost()
@@ -98,5 +121,20 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(15f);
         wasFast = false;
     }
-
+    public IEnumerator SlowDown()
+    {
+        slowedDown = true;
+        speed = 2f;
+        yield return new WaitForSeconds(5f);
+        speed = 10f;
+        slowedDown = false;
+    }
+    public IEnumerator Spikes()
+    {
+        flatTire = true;
+        speed = 3f;
+        yield return new WaitForSeconds(5f);
+        speed = 10f;
+        flatTire = false; 
+    }
 }

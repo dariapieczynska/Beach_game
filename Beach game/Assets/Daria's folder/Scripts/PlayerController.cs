@@ -15,10 +15,11 @@ public class PlayerController : MonoBehaviour
     public bool flatTire = false;
     public bool hasTire = false;
     public List<Vector3> positionHistory;
-
+    public List<Quaternion> rotationHistory;
     private void Start()
     {
         positionHistory = new List<Vector3>();
+        rotationHistory = new List<Quaternion>();
     }
     // Update is called once per frame
     void Update()
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
         if (positionHistory.Count < 50)
         {
             positionHistory.Add(transform.position);
+            rotationHistory.Add(transform.rotation);
         }
         else
         {
@@ -53,9 +55,12 @@ public class PlayerController : MonoBehaviour
             {
                 positionHistory.RemoveAt(0);
                 positionHistory.Add(transform.position);
+                rotationHistory.RemoveAt(0);
+                rotationHistory.Add(transform.rotation);
             }
             
         }
+        
     }
     /// <summary>
     /// This function lets the car turn 90 degrees to its right

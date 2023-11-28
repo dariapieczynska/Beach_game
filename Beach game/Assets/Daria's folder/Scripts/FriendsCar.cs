@@ -19,6 +19,10 @@ public class FriendsCar : MonoBehaviour
         {
             transform.position = PlayerController.positionHistory[10];
         }
+        if (PlayerController.rotationHistory.Count > 10)
+        {
+            transform.rotation = PlayerController.rotationHistory[10];
+        }
 
     }
 }

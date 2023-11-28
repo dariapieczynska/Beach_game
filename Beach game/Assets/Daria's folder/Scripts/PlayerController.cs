@@ -100,11 +100,24 @@ public class PlayerController : MonoBehaviour
         }
         if(other.tag=="Spikes")
         {
-            if(!hasTire)
+            if(hasTire)
             {
+                other.gameObject.SetActive(false);
+                hasTire = false;
+            }
+            else 
+            {
+                
                 other.gameObject.SetActive(false);
                 StartCoroutine(Spikes());
             }
+        }
+        if(other.tag=="Tire")
+        {
+            hasTire = true;
+            other.gameObject.SetActive(false);
+            
+
         }
     }
     public IEnumerator SpeedBoost()

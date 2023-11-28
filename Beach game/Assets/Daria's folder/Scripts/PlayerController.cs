@@ -13,7 +13,13 @@ public class PlayerController : MonoBehaviour
     public bool wasFast = false;
     public bool slowedDown = false;
     public bool flatTire = false;
-    public bool hasTire = false; 
+    public bool hasTire = false;
+    public List<Vector3> positionHistory;
+
+    private void Start()
+    {
+        positionHistory = new List<Vector3>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -37,8 +43,19 @@ public class PlayerController : MonoBehaviour
         {
             transform.position -= transform.forward * speed * Time.deltaTime;
         }
-
-
+        if (positionHistory.Count < 50)
+        {
+            positionHistory.Add(transform.position);
+        }
+        else
+        {
+            if (transform.position != positionHistory[positionHistory.Count-1])
+            {
+                positionHistory.RemoveAt(0);
+                positionHistory.Add(transform.position);
+            }
+            
+        }
     }
     /// <summary>
     /// This function lets the car turn 90 degrees to its right
@@ -102,12 +119,13 @@ public class PlayerController : MonoBehaviour
         {
             if(hasTire)
             {
+                Debug.Log("Spikes with a tire");
                 other.gameObject.SetActive(false);
                 hasTire = false;
             }
             else 
             {
-                
+                Debug.Log("Spikes with no tire");
                 other.gameObject.SetActive(false);
                 StartCoroutine(Spikes());
             }

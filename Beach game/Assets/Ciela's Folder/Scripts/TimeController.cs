@@ -2,12 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class TimeController : MonoBehaviour
 {
     public static TimeController instance;
-    public Text timeCounter;
+    public TMP_Text timeCounter;
 
     private TimeSpan timePlaying;
     private bool timerGoing;
@@ -22,6 +22,7 @@ public class TimeController : MonoBehaviour
     {
         timeCounter.text = "Time: 00:00:00";
         timerGoing = false;
+        beginTimer();
     }
 
     public void beginTimer() 
@@ -30,6 +31,12 @@ public class TimeController : MonoBehaviour
         elapsedTime = 0f;
 
         StartCoroutine(UpdateTimer());
+
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     public void EndTimer() 
@@ -45,6 +52,11 @@ public class TimeController : MonoBehaviour
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
             string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
             timeCounter.text = timePlayingStr;
+
+            if (elapsedTime >= 180.0f)
+            {
+                QuitGame();
+            }
 
             yield return null;
         }

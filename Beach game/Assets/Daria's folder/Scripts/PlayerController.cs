@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position -= transform.forward * speed * Time.deltaTime;
         }
-        if (positionHistory.Count < 50)
+        if (positionHistory.Count < 60)
         {
             positionHistory.Add(transform.position);
             rotationHistory.Add(transform.rotation);

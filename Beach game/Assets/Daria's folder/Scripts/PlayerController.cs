@@ -16,8 +16,10 @@ public class PlayerController : MonoBehaviour
     public bool hasTire = false;
     public List<Vector3> positionHistory;
     public List<Quaternion> rotationHistory;
+    public GameObject tireOnTheCar;
     private void Start()
     {
+        tireOnTheCar.SetActive(false);
         positionHistory = new List<Vector3>();
         rotationHistory = new List<Quaternion>();
     }
@@ -44,7 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position -= transform.forward * speed * Time.deltaTime;
         }
-        if (positionHistory.Count < 60)
+        if (positionHistory.Count < 100)
         {
             positionHistory.Add(transform.position);
             rotationHistory.Add(transform.rotation);
@@ -127,6 +129,7 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Spikes with a tire");
                 other.gameObject.SetActive(false);
                 hasTire = false;
+                tireOnTheCar.SetActive(false);
             }
             else 
             {
@@ -138,6 +141,7 @@ public class PlayerController : MonoBehaviour
         if(other.tag=="Tire")
         {
             hasTire = true;
+            tireOnTheCar.SetActive(true);
             other.gameObject.SetActive(false);
             
 

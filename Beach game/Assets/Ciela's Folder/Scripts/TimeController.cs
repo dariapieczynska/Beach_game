@@ -12,7 +12,7 @@ public class TimeController : MonoBehaviour
     private TimeSpan timePlaying;
     private bool timerGoing;
 
-    private float elapsedTime;
+    public float elapsedTime;
 
     private void Awake()
     {

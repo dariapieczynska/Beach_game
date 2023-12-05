@@ -14,9 +14,12 @@ public class PlayerController : MonoBehaviour
     public bool slowedDown = false;
     public bool flatTire = false;
     public bool hasTire = false;
+    public bool dropOff = false;
+    public bool carFollowing = false; 
     public List<Vector3> positionHistory;
     public List<Quaternion> rotationHistory;
     public GameObject tireOnTheCar;
+    public FriendsCar FriendsCar;
     private void Start()
     {
         tireOnTheCar.SetActive(false);
@@ -145,6 +148,15 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             
 
+        }
+        if(other.tag=="Parking")
+        {
+            if (carFollowing == true)
+            {
+                FriendsCar.droppedOff = true;
+                carFollowing = false;
+            }
+            
         }
     }
     public IEnumerator SpeedBoost()

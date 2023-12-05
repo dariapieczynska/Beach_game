@@ -9,6 +9,7 @@ public class FriendsCar : MonoBehaviour
     public float xCoordinate;
     public float zCoordinate;
     public bool isFollowing = false;
+    public bool droppedOff = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +20,13 @@ public class FriendsCar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isFollowing)
+        if(!isFollowing && !PlayerController.carFollowing)
         {
             if(Vector3.Distance(pickupCar.transform.position, this.transform.position) <= 2)
             {
                 isFollowing = true;
+                PlayerController.carFollowing = true;
+                PlayerController.FriendsCar = this;
             }
         }
         
@@ -32,16 +35,18 @@ public class FriendsCar : MonoBehaviour
     }
     public void Follow()
     {
-
-        if (isFollowing)
+        if (!droppedOff)
         {
-            if (PlayerController.positionHistory.Count > 10)
+            if (isFollowing)
             {
-                transform.position = PlayerController.positionHistory[10];
-            }
-            if (PlayerController.rotationHistory.Count > 10)
-            {
-                transform.rotation = PlayerController.rotationHistory[10];
+                if (PlayerController.positionHistory.Count > 10)
+                {
+                    transform.position = PlayerController.positionHistory[10];
+                }
+                if (PlayerController.rotationHistory.Count > 10)
+                {
+                    transform.rotation = PlayerController.rotationHistory[10];
+                }
             }
         }
     }

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-//Pieczynska, Daria
-// 11/16/2023
+//Pieczynska, Daria & Parent, Ciela
+// 12/07/2023
 //Player moves forwared, backward and to the sides
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public List<Quaternion> rotationHistory;
     public GameObject tireOnTheCar;
     public FriendsCar FriendsCar;
+    public FriendTracker FriendTracker;
     private void Start()
     {
         tireOnTheCar.SetActive(false);
@@ -155,6 +156,19 @@ public class PlayerController : MonoBehaviour
             {
                 FriendsCar.droppedOff = true;
                 carFollowing = false;
+                if(!FriendTracker.friend1)
+                {
+                    FriendTracker.friend1 = FriendsCar;
+                }
+                else if(!FriendTracker.friend2)
+                {
+                    FriendTracker.friend2 = FriendsCar;
+                }
+                else if (!FriendTracker.friend3)
+                {
+                    FriendTracker.friend3 = FriendsCar;
+                }
+                FriendsCar = null;
             }
             
         }

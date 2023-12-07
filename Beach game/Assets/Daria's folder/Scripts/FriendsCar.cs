@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Author: [Pieczynska, Daria & Parent, Ciela]
+ * Last Updated: [12/07/2023]
+ * [Makes the friends' cars follow the player]
+ */
 public class FriendsCar : MonoBehaviour
 {
     public PlayerController PlayerController;
@@ -33,6 +38,9 @@ public class FriendsCar : MonoBehaviour
         Follow();
 
     }
+    /// <summary>
+    /// makes the friend's car follow the player
+    /// </summary>
     public void Follow()
     {
         if (!droppedOff)

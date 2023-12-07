@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/*
+ * Author: [Pieczynska, Daria & Parent, Ciela]
+ * Last Updated: [12/07/2023]
+ * [Makes the camera follow the player]
+ */
 public class Camera : MonoBehaviour
 {
     public GameObject player;
@@ -10,7 +14,9 @@ public class Camera : MonoBehaviour
 
 
 
-
+    /// <summary>
+    /// this function makes the camera follow the player
+    /// </summary>
     private void LateUpdate()
     {
         Vector3 tempPos = transform.position;

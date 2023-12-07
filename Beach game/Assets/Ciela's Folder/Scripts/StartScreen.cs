@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/*
+ * Author: [Pieczynska, Daria & Parent, Ciela]
+ * Last Updated: [12/072023]
+ * [Start UI]
+ */
 public class StartScreen : MonoBehaviour
 {
     /// <summary>

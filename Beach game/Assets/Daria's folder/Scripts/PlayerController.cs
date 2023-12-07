@@ -168,6 +168,11 @@ public class PlayerController : MonoBehaviour
                 {
                     FriendTracker.friend3 = FriendsCar;
                 }
+                else if (!FriendTracker.friend4)
+                {
+                    FriendTracker.friend4 = FriendsCar;
+                }
+
                 FriendsCar = null;
             }
             

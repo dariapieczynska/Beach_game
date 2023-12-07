@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 //Player moves forwared, backward and to the sides
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 6f;
     public bool canTurn = true;
     public bool isFast = false;
     public bool wasFast = false;
@@ -162,9 +162,9 @@ public class PlayerController : MonoBehaviour
     public IEnumerator SpeedBoost()
     {
         isFast = true;
-        speed = 12f;
-        yield return new WaitForSeconds(5f);
         speed = 10f;
+        yield return new WaitForSeconds(5f);
+        speed = 6f;
         isFast = false;
     }
     public IEnumerator CoolDown()
@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour
         slowedDown = true;
         speed = 2f;
         yield return new WaitForSeconds(5f);
-        speed = 10f;
+        speed = 6f;
         slowedDown = false;
     }
     public IEnumerator Spikes()
@@ -186,7 +186,7 @@ public class PlayerController : MonoBehaviour
         flatTire = true;
         speed = 3f;
         yield return new WaitForSeconds(5f);
-        speed = 10f;
+        speed = 6f;
         flatTire = false; 
     }
 }

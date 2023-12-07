@@ -15,8 +15,9 @@ public class FriendTracker : MonoBehaviour
     public FriendsCar friend1;
     public FriendsCar friend2;
     public FriendsCar friend3;
+    public FriendsCar friend4;
 
- 
+
     public TimeController Timer;
     public TMP_Text FriendsText;
 
@@ -29,21 +30,48 @@ public class FriendTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (friend1 != null)
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            FriendsText.text = "Friends: 1/3";
-        }
-        if (friend2 != null) 
-        {
-            FriendsText.text = "Friends: 2/3";
-        }
-        if (friend3 != null)
-        {
-            FriendsText.text = "Friends: 3/3";
-        }
-        
+            if (friend1 != null)
+            {
+                FriendsText.text = "Friends: 1/3";
+            }
+            if (friend2 != null)
+            {
+                FriendsText.text = "Friends: 2/3";
+            }
+            if (friend3 != null)
+            {
+                FriendsText.text = "Friends: 3/3";
 
-    }
+                SceneManager.LoadScene(3);
+            }
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            if (friend1 != null)
+            {
+                FriendsText.text = "Friends: 1/4";
+            }
+            if (friend2 != null)
+            {
+                FriendsText.text = "Friends: 2/4";
+            }
+            if (friend3 != null)
+            {
+                FriendsText.text = "Friends: 3/4";
+            }
+            if (friend4 != null)
+            {
+                FriendsText.text = "Friends: 4/4";
+
+                SceneManager.LoadScene(4);
+            }
+
+        }
+
+        }
+       
 
     public void GainALife() 
     {

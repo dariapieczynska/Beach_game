@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Ciela's Folder/Scenes/Start.unity
+    guid: 2980393f3800fce4fb7769b850962c26
+  - enabled: 0
     path: Assets/Daria's folder/Scenes/daria.unity
     guid: 07d37760dd1378149b05078a4abe47dc
   - enabled: 1
     path: Assets/Ciela's Folder/Scenes/Game Over.unity
     guid: af046d280fe44b34c8900671acf8d181
-  - enabled: 1
-    path: Assets/Ciela's Folder/Scenes/Start.unity
-    guid: 2980393f3800fce4fb7769b850962c26
   - enabled: 1
     path: Assets/FINAL SCENE/Level 1.unity
     guid: 6b45572c708aba5449279d009f0e9b37

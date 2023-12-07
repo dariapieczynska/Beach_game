@@ -4,7 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-
+/*
+ * Author: [Pieczynska, Daria & Parent, Ciela]
+ * Last Updated: [12/072023]
+ * [Timer]
+ */
 public class TimeController : MonoBehaviour
 {
     public static TimeController instance;

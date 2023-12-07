@@ -4,7 +4,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+/*
+ * Author: [Pieczynska, Daria & Parent, Ciela]
+ * Last Updated: [12/072023]
+ * [Tracks friend UI]
+ */
 public class FriendTracker : MonoBehaviour
 {
     //how much a friend is worth:
@@ -72,7 +76,7 @@ public class FriendTracker : MonoBehaviour
 
         }
        
-
+   
     public void GainALife() 
     {
         //send player to next level

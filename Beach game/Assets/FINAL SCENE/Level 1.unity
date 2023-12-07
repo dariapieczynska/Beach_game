@@ -597,6 +597,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 275973983434509695, guid: 8456a0a0485f58542871b988227cc88b, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 370721795329964152, guid: 8456a0a0485f58542871b988227cc88b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -84.460144
@@ -637,6 +641,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1945216591544157097, guid: 8456a0a0485f58542871b988227cc88b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3558785167106556199, guid: 8456a0a0485f58542871b988227cc88b, type: 3}
       propertyPath: pickupCar
       value: 
@@ -648,6 +656,14 @@ PrefabInstance:
     - target: {fileID: 4895589034904656887, guid: 8456a0a0485f58542871b988227cc88b, type: 3}
       propertyPath: m_Name
       value: Friend's car (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226635918399378754, guid: 8456a0a0485f58542871b988227cc88b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014301826470682267, guid: 8456a0a0485f58542871b988227cc88b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1137,6 +1153,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 303364388}
   m_SourcePrefab: {fileID: 100100000, guid: a0b38a85264847e4b95a443d64300ae9, type: 3}
+--- !u!114 &1392440245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4744556454767144851, guid: a0b38a85264847e4b95a443d64300ae9, type: 3}
+  m_PrefabInstance: {fileID: 1392440244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521c2def870be364789850033571c530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1466399781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1244,6 +1271,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2181749786842111255, guid: da9f5cb563def34458a37a9d459f381d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932925752364274768, guid: da9f5cb563def34458a37a9d459f381d, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1434,6 +1465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Friend's car Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1920150156542376115, guid: 760613d65eb79fd478abef1779e83d12, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2124816135677489601, guid: 760613d65eb79fd478abef1779e83d12, type: 3}
       propertyPath: pickupCar
       value: 
@@ -1442,6 +1477,10 @@ PrefabInstance:
       propertyPath: PlayerController
       value: 
       objectReference: {fileID: 628137074}
+    - target: {fileID: 3591042102702437226, guid: 760613d65eb79fd478abef1779e83d12, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5326029404137018761, guid: 760613d65eb79fd478abef1779e83d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -49.89029
@@ -1482,6 +1521,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5699515215975112846, guid: 760613d65eb79fd478abef1779e83d12, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211033619995291224, guid: 760613d65eb79fd478abef1779e83d12, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1499,9 +1546,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: car
       objectReference: {fileID: 0}
+    - target: {fileID: 8059014039534744437, guid: f73f86e7a55366144b539d8d30591689, type: 3}
+      propertyPath: FriendTracker
+      value: 
+      objectReference: {fileID: 1392440245}
     - target: {fileID: 8064468212773992846, guid: f73f86e7a55366144b539d8d30591689, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -58.533283
+      value: -62.82
       objectReference: {fileID: 0}
     - target: {fileID: 8064468212773992846, guid: f73f86e7a55366144b539d8d30591689, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1509,7 +1560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8064468212773992846, guid: f73f86e7a55366144b539d8d30591689, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.7075653
+      value: 19.24
       objectReference: {fileID: 0}
     - target: {fileID: 8064468212773992846, guid: f73f86e7a55366144b539d8d30591689, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1552,6 +1603,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 121857609775342771, guid: 252e4f27278283d4bb5399439dbd8533, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 522850471210668468, guid: 252e4f27278283d4bb5399439dbd8533, type: 3}
       propertyPath: m_LocalPosition.x
       value: -44.145794
@@ -1592,6 +1647,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1772821859073845861, guid: 252e4f27278283d4bb5399439dbd8533, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4725463977902043707, guid: 252e4f27278283d4bb5399439dbd8533, type: 3}
       propertyPath: m_Name
       value: Friend's car (2) Variant
@@ -1604,6 +1663,14 @@ PrefabInstance:
       propertyPath: PlayerController
       value: 
       objectReference: {fileID: 628137074}
+    - target: {fileID: 6056756941616151694, guid: 252e4f27278283d4bb5399439dbd8533, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186679108488918871, guid: 252e4f27278283d4bb5399439dbd8533, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6526753951496355067, guid: 252e4f27278283d4bb5399439dbd8533, type: 3}
@@ -1697,7 +1764,7 @@ Transform:
   m_GameObject: {fileID: 1987762856}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -58.22, y: 13.04, z: 7.06}
+  m_LocalPosition: {x: -62.07, y: 13.04, z: 19.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -1043,6 +1043,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2175989886083519164, guid: a0b38a85264847e4b95a443d64300ae9, type: 3}
+      propertyPath: m_text
+      value: 'Friend: 0/3'
+      objectReference: {fileID: 0}
     - target: {fileID: 2545170434998415632, guid: a0b38a85264847e4b95a443d64300ae9, type: 3}
       propertyPath: m_Color.a
       value: 0

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ciela's Folder/Scenes/YouWinUI.unity
     guid: df1495eeb3d7b954da43cf19ea290ee7
+  - enabled: 1
+    path: Assets/Ciela's Folder/Scenes/PlayUILvl2.unity
+    guid: 32ea0121224bcac438a9b0f7d7bd6795
   m_configObjects: {}

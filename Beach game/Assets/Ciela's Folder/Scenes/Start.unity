@@ -463,12 +463,11 @@ MonoBehaviour:
     for mud, spikes. They will slow you down.
 
 
-    4. Use the pop up map below for
-    guidance
+    4. Use the map below for guidance
 
 
-    Tips: Tires will prevent spike damage, and the arrows will give
-    you a speed boost.'
+    Tips:
+    Tires will prevent spike damage, and the arrows will give you a speed boost.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -21,6 +21,6 @@ public class YouWinScreen : MonoBehaviour
 
     public void SwitchScene(int sceneIndex)
     {
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(2);
     }
 }

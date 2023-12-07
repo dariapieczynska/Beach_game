@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimeController : MonoBehaviour
 {
@@ -55,7 +56,7 @@ public class TimeController : MonoBehaviour
 
             if (elapsedTime >= 180.0f)
             {
-                QuitGame();
+                SceneManager.LoadScene(1);
             }
 
             yield return null;

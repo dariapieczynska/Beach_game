@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2985070172789829059}
   - component: {fileID: 3670338737536719552}
   - component: {fileID: 8168399803455646154}
+  - component: {fileID: 3143301438750659585}
   m_Layer: 5
   m_Name: PlayUILvl2Prefab
   m_TagString: Untagged
@@ -106,6 +107,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3143301438750659585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183361408329051044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7939d177dbdd1fe429ee4361f7e35097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeCounter: {fileID: 8772903048109309442}
+  elapsedTime: 0
 --- !u!1 &1384057929051839654
 GameObject:
   m_ObjectHideFlags: 0
